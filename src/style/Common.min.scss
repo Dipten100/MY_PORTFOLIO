@@ -1,0 +1,35 @@
+.d-none {
+  display: none;
+}
+.st-section {
+  padding-top: 120px;
+  color: var(--primary-text-color);
+}
+.lab-btn {
+  padding: 0.2em 0.8em;
+  border-radius: 20px;
+  background: var(--button-color);
+  color: var(--button-text-color);
+  font-size: 1.2em;
+  font-weight: 600;
+  border: none;
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    background: var(--button-hover-color);
+  }
+}
+
+.home-btn {
+  padding: 0.4em 0.6em;
+  border-radius: 50px;
+  background: transparent;
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  &:hover {
+    background: var(--button-color);
+    color: var(--black-color);
+  }
+}

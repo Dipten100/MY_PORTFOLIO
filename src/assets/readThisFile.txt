@@ -1,0 +1,7 @@
+If you add image for website design the put image in "src/assets/data/Uploads/icons" (icons folder) then add image name with image extension in your data file
+
+if you add icons using react icon then put icon link in "src/components/GetIcons.jsx" (in Geticons react file) and add icon name in your data file
+
+If you want to add image of projects then put image in "src/assets/data/Uploads/Images" and then put name of image with extension in your data file
+
+If you want to add video of projects then put video in "src/assets/data/Uploads/Videos" and then put name of videos with extension in your data file

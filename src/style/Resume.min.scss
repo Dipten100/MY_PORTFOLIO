@@ -1,0 +1,343 @@
+.resume-section {
+  display: block;
+  .container {
+    .row {
+      .col-4 {
+        .top-portion {
+          .title {
+            p {
+              font-size: 36px;
+              font-weight: 700;
+              letter-spacing: 0.2em;
+            }
+          }
+          .description {
+            font-size: 18px;
+            opacity: 60%;
+            margin: 2em 0;
+          }
+        }
+        .bottom-portion {
+          margin: 1em 0 0 0;
+          .heading {
+            cursor: pointer;
+            background: var(--container-background-color);
+            padding: 0.5em;
+            margin: 1.5em 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 10px;
+            &.active {
+              background: var(--hover-text-color);
+              color: var(--black-color);
+            }
+          }
+        }
+      }
+      .col-8 {
+        .content {
+          .content-heading {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+          }
+          .content-details {
+            font-size: 18px;
+            opacity: 60%;
+            margin: 2em 0;
+          }
+          .more-about {
+            height: 400px;
+            display: grid;
+            grid-gap: 20px;
+            padding: 2em;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            .about {
+              background: var(--container-background-color);
+              border-radius: 10px;
+              padding: 2em;
+              .about-top {
+                font-size: 16px;
+                font-weight: 500;
+                font-family: var(--font-family-JetBrains-Mono);
+                color: var(--hover-text-color);
+              }
+              .about-middle {
+                font-size: 18px;
+                font-weight: 600;
+              }
+              .about-bottom {
+                margin: 0.5em 0;
+                ul {
+                  li {
+                    &::marker {
+                      color: var(--hover-text-color);
+                    }
+                  }
+                }
+              }
+            }
+            &::-webkit-scrollbar {
+              width: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+              background: var(--primary-text-color);
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background: var(--button-color);
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+              background: var(--hover-text-color);
+            }
+
+            &::-webkit-scrollbar-button {
+              display: none;
+            }
+          }
+          .more-about-2 {
+            height: 400px;
+            display: grid;
+            grid-gap: 20px;
+            padding: 2em;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            .about {
+              background: var(--container-background-color);
+              border-radius: 10px;
+              padding: 2em;
+              .about-body {
+                position: relative;
+                display: block;
+                .iconImg{
+                  width: 100%;
+                  text-align: center;
+                  img {
+                    height: 150px;
+                    width: 150px;
+                  }
+                }
+                .icon {
+                  width: 100%;
+                  font-size: 6em;
+                  text-align: center;
+                }
+                .tooltip-text {
+                  visibility: hidden;
+                  width: 120px;
+                  background-color: var(--tooltip-container-background-color);
+                  color: var(--tooltip-container-text-color);
+                  text-align: center;
+                  border-radius: 6px;
+                  padding: 5px 0;
+
+                  /* Position the tooltip */
+                  position: absolute;
+                  z-index: 1;
+                  right: 30px;
+                  top: -50px;
+                }
+                &:hover {
+                  .tooltip-text {
+                    visibility: visible;
+                  }
+                }
+              }
+            }
+            &::-webkit-scrollbar {
+              width: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+              background: var(--primary-text-color);
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background: var(--button-color);
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+              background: var(--hover-text-color);
+            }
+
+            &::-webkit-scrollbar-button {
+              display: none;
+            }
+          }
+          .more-about-3 {
+            height: 400px;
+            display: grid;
+            .about {
+              .about-body {
+                position: relative;
+                display: inline-block;
+                word-spacing: 0.3em;
+                gap: 1em;
+                span {
+                  font-size: 18px;
+                  font-weight: 600;
+                  text-transform: none;
+                  &.key {
+                    color: var(--primary-text-color);
+                    opacity: 60%;
+                    margin-right: 1em;
+                  }
+                  &.value {
+                    color: var(--primary-text-color);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive
+/* Screen smaller than 600px */
+@media (max-width: 600px) {
+  .resume-section {
+    .container {
+      .row {
+        display: block;
+        position: relative;
+        .col-4 {
+          width: 100%;
+        }
+        .col-8 {
+          width: 100%;
+          .content {
+            .more-about-2 {
+              .about {
+                .about-body {
+                  width: 100%;
+                  .icon {
+                    width: 100%;
+                  }
+                  .tooltip-text {
+                    right: 90px;
+                    top: -50px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Screen smaller than 1200px */
+@media (max-width: 1200px) {
+  .resume-section {
+    .container {
+      .row {
+        .col-4 {
+          .top-portion {
+            .title {
+              p {
+                font-size: 22px;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+              }
+            }
+            .description {
+              font-size: 16px;
+              opacity: 60%;
+              margin: 2em 0;
+            }
+          }
+        }
+        .col-8 {
+          .content {
+            .more-about-2 {
+              .about {
+                .about-body {
+                  .icon {
+                    width: 100%;
+                  }
+                  .tooltip-text {
+                    right: 40px;
+                    top: -50px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Screen larger than 1200px */
+@media (min-width: 1200px) {
+  .resume-section {
+    .container {
+      .row {
+        .col-8 {
+          .content {
+            .more-about-2 {
+              .about {
+                .about-body {
+                  .icon {
+                    width: 100%;
+                  }
+                  .tooltip-text {
+                    right: 100px;
+                    top: -50px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// this is for other than skill section
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .more-about {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .more-about-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .more-about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .more-about-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// this is for skills section
+/* Screen smaller than 900px? 1 columns */
+@media (max-width: 900px) {
+  .more-about-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* Screen larger than 1200px? 3 columns */
+@media (min-width: 1200px) {
+  .more-about-2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Screen larger than 900px? 2 columns */
+@media (min-width: 900px) {
+  .more-about-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

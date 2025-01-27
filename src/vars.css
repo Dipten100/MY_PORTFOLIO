@@ -1,0 +1,21 @@
+:root {
+    /* colors */
+  --bg-color: #1c1c22;
+  --button-color:#00ff99;
+  --button-hover-color:#00ff99dc;
+  --button-text-color:#000000;
+  --primary-text-color:#ffffff;
+  --select-text-color:#00ff99;
+  --hover-text-color:#00e187;
+  --error-text-input-box-color:#fe2836;
+  --navbar-list-type-background-color:#c5c6d06a;
+  --container-background-color:#c5c6d021;
+  --tooltip-container-background-color:#c5c6d062;
+  --tooltip-container-text-color:#000000;
+  --black-color:#000000;
+
+  /* fonts */
+  --font-family-Barlow-Condensed: "Barlow Condensed", sans-serif;
+  --font-family-Montserrat: "Montserrat", sans-serif;
+  --font-family-JetBrains-Mono: "JetBrains Mono", monospace;
+}

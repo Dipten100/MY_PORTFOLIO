@@ -1,0 +1,88 @@
+.services-section {
+  display: block;
+  .container {
+    .row {
+      .col-12 {
+        .services {
+          display: grid;
+          grid-gap: 20px;
+          .service-box {
+            cursor: pointer;
+            padding: 2em;
+            border-bottom: 0.1em solid var(--container-background-color);
+            .top-portion {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              .index {
+                font-size: 36px;
+                font-weight: 700;
+                font-family: var(--font-family-JetBrains-Mono);
+                -webkit-text-stroke: 1px var(--primary-text-color);
+                color: transparent;
+                transition: all .5s;
+              }
+              .icon {
+                background: var(--primary-text-color);
+                padding: 0.5em;
+                border-radius: 50%;
+                transition: all .5s;
+                img {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+            }
+            .middle-portion{
+                p{
+                    &.title{
+                        font-size: 42px;
+                        font-weight: 500;
+                        transition: all .5s;
+                        font-family: var(--font-family-JetBrains-Mono);
+                    }
+                }
+            }
+            .bottom-portion{
+                .description{
+                    opacity: 60%;
+                }
+            }
+            &:hover{
+              .top-portion{
+                  .index{
+                      -webkit-text-stroke: 1px var(--hover-text-color);
+                  }
+                  .icon{
+                    background: var(--hover-text-color);
+                  }
+              }
+              .middle-portion{
+                p{
+                    &.title{
+                        color: var(--hover-text-color);
+                    }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .services {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

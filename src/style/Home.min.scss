@@ -1,0 +1,201 @@
+.home-section {
+  display: block;
+  .container {
+    .row {
+      .col-4 {
+        .main-img {
+          transform: translateY(50px);
+          filter: blur(20px);
+          opacity: 0;
+          animation: showContent 0.5s linear 1 forwards;
+          animation-delay: 0.8s;
+          img {
+            height: 500px;
+            border-radius: 50px;
+            box-shadow: var(--button-color) 0px 3px 8px;
+          }
+        }
+      }
+      .col-8 {
+        align-items: center;
+        margin: 10em 0 0 0;
+        padding-left: 2em;
+        .main-text {
+          p {
+            font-size: 2.5em;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            transform: translateY(50px);
+            filter: blur(20px);
+            opacity: 0;
+            animation: showContent 0.5s linear 1 forwards;
+            animation-delay: 0.6s;
+            &.name {
+              color: var(--hover-text-color);
+            }
+          }
+        }
+        .sub-text {
+          opacity: 60%;
+          p {
+            font-size: 1.5em;
+            font-weight: 500;
+            width: auto;
+            height: auto;
+            transform: translateY(50px);
+            filter: blur(20px);
+            animation: showContent 0.5s linear 1 forwards;
+            animation-delay: 0.8s;
+          }
+        }
+        .buttons {
+          display: flex;
+          gap: 2em;
+          transform: translateY(50px);
+          filter: blur(20px);
+          opacity: 0;
+          animation: showContent 0.5s linear 1 forwards;
+          animation-delay: 1s;
+        }
+      }
+    }
+    .col-12 {
+      .home-page-items {
+        display: flex;
+        justify-content: center;
+        margin-top: 4em;
+        gap: 1.5em;
+        .home-page-item {
+          display: flex;
+          width: 200px;
+          gap: 1.3em;
+          p {
+            &.number {
+              font-size: 3em;
+              font-weight: 700;
+              color: var(--hover-text-color);
+            }
+            &.text {
+              font-size: 1.2em;
+              font-weight: 500;
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+// responsive
+/* Screen smaller than 600px? */
+@media (max-width: 600px) {
+  .home-section {
+    .container {
+      .row {
+        display: block;
+        position: relative;
+        .col-4 {
+          margin: 1em 0 0 0;
+          width: 100%;
+          position: relative;
+          display: block;
+          .main-img {
+            width: 100%;
+            text-align: center;
+            img {
+              height: 400px;
+            }
+          }
+        }
+        .col-8 {
+          width: 100%;
+          margin: 1em 0 0 0;
+          position: relative;
+          .main-text {
+            p {
+              font-size: 1.8em;
+            }
+          }
+          .sub-text {
+            p {
+              font-size: 1em;
+            }
+          }
+        }
+        .col-12 {
+          .home-page-items {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(1, 1fr);
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Screen larger than 600px and smaller than 1200px? */
+@media (min-width: 600px) {
+  .home-section {
+    .container {
+      .row {
+        .col-4 {
+          .main-img {
+            img {
+              height: 40%;
+            }
+          }
+        }
+        .col-8 {
+          margin: 5em 0 0 0;
+          position: relative;
+          .main-text {
+            p {
+              font-size: 1.8em;
+            }
+          }
+          .sub-text {
+            p {
+              font-size: 1em;
+            }
+          }
+        }
+        .col-12 {
+          .home-page-items {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Screen larger than 1200px? */
+@media (min-width: 1200px) {
+  .home-section {
+    .container {
+      .row {
+        .col-8{
+          margin: 10em 0 0 0;
+        }
+        .col-12 {
+          .home-page-items {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
